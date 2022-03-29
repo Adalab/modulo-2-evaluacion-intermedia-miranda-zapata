@@ -37,10 +37,14 @@ function checkBalance() {
   return balance;
 }
 
-// Función para terminar el juego
+// Función para terminar el juego (limitando el saldo)
 function stopGame() {
-  if (balance > 200 || balance === 0) {
-    botMessage.innerHTML = 'El juego ha terminado';
+  if (balance <= 0) {
+    botMessage.innerHTML = 'Ya has apostado suficiente por hoy...';
+    playerBalance.innerHTML = 'Has llegado a tu saldo mínimo: 0';
+  } else if (balance >= 200) {
+    botMessage.innerHTML = 'Mejor lo dejamos aquí';
+    playerBalance.innerHTML = 'Has llegado a tu saldo tope: 200';
   }
 }
 
