@@ -8,7 +8,7 @@ const playerBet = document.querySelector('.js-bet');
 const playerBalance = document.querySelector('.js-balance');
 const botMessage = document.querySelector('.js-message');
 const btnPlay = document.querySelector('.js-button');
-// Constante número aleatorio
+// Constante número aleatorio (fuera de la función para que sólo se genere una vez y la usuaria pueda apostar siempre al mismo, hasta adivinarlo)
 const randomNumber = getRandomNumber(6);
 console.log(randomNumber);
 
@@ -19,6 +19,7 @@ function getRandomNumber(max) {
 
 // Función para adivinar el número
 function checkResults() {
+  // Aquí iría la constante randomNumber si quisiera generar un número aleatorio diferente cada jugada
   const valueChoice = parseInt(playerChoice.value);
   const valueBet = parseInt(playerBet.value);
 
@@ -48,7 +49,14 @@ function stopGame() {
   }
 }
 
-// Función para resetear el número aleatorio cuando la usuaria lo adivine
+// Función para resetear el número aleatorio cuando la usuaria lo adivine (porque la constante está fuera de la función)
+
+// Función para resetear el juego
+/* function resetGame() {
+  if (balance <= 0 || balance >= 200) {
+    btnPlay.innerHTML = 'Reiniciar';
+  }
+} */
 
 // Función manejadora
 function handleClickBtn(event) {
