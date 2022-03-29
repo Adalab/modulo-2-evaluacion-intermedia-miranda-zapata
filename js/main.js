@@ -48,6 +48,8 @@ function stopGame() {
   }
 }
 
+// Función para resetear el número aleatorio cuando la usuaria lo adivine
+
 // Función manejadora
 function handleClickBtn(event) {
   event.preventDefault();
