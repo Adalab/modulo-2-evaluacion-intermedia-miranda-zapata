@@ -1,5 +1,6 @@
 'use strict';
 // Variables
+let balance = 50;
 
 // Constantes
 const playerChoice = document.querySelector('.js-number');
@@ -19,6 +20,7 @@ function getRandomNumber(max) {
 // Función para adivinar el número
 function checkResults() {
   const valueChoice = parseInt(playerChoice.value);
+  const valueBet = parseInt(playerBet.value);
 
   if (randomNumber === valueChoice) {
     botMessage.innerHTML = 'Has ganado el doble de lo apostado';
@@ -29,10 +31,25 @@ function checkResults() {
   }
 }
 
+// Función para indicar el saldo
+function checkBalance() {
+  playerBalance.innerHTML = `¡Tu saldo es... ${balance}!`;
+  return balance;
+}
+
+// Función para terminar el juego
+function stopGame() {
+  if (balance > 200 || balance === 0) {
+    botMessage.innerHTML = 'El juego ha terminado';
+  }
+}
+
 // Función manejadora
 function handleClickBtn(event) {
   event.preventDefault();
   checkResults();
+  checkBalance();
+  stopGame();
 }
 
 // Evento del botón
