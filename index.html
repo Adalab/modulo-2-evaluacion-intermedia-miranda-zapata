@@ -16,17 +16,17 @@
 
     <main>
       <h2>Introduce aquí tu jugada:</h2>
-      <form action="">
-        <select class="js-number" name="" id="">
-          <option disabled selected hidden>
+      <form>
+        <select class="js-number">
+          <option disabled selected hidden value="none">
             Qué número apuestas del 1 al 6
           </option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
         </select>
 
         <!-- Player's bet -->
@@ -35,9 +35,11 @@
       </form>
 
       <!-- Message -->
-      <p class="js-message">¡Vamos a jugar!</p>
+      <p class="message js-message">¡Vamos a jugar!</p>
       <!-- Player's balance -->
-      <p class="js-balance">Saldo: 50</p>
+      <p class="balance js-balance">Saldo: 50</p>
+      <!-- Bot's die throw -->
+      <p class="randomNumber js-randomNumber"></p>
     </main>
 
     <script type="text/JavaScript" src="./js/main.js"></script>

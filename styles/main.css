@@ -20,3 +20,19 @@
   color: whitesmoke;
   border-radius: 5px;
 }
+
+.message {
+  font-size: larger;
+  color: blueviolet;
+}
+
+.balance {
+  font-size: large;
+  font-style: italic;
+}
+
+.randomNumber {
+  font-size: x-small;
+  font-style: italic;
+  color: gray;
+}
